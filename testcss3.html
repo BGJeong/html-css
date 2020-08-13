@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            /*후손 선택자*/
+           ol li {
+               color:red;
+               font-size: 30px;
+           }
+           #u2 li {
+               color: red;
+               font-size: 30px;
+           }
+           /*자손 선택자*/
+           #u1 > li{
+               color: blue;
+           }
+        </style>
+    </head>
+    <body>
+        <!-- html 주석 -->
+        <ul id="u1">
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+        </ul>
+        <ul id="u2">
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+        </ul>
+    </body>
+</html>
