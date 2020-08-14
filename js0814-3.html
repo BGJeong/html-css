@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+
+    </style>
+    <title>Hello, world!</title>
+    <script type="text/javascript">
+        // $('.btn').click(function(){
+        //     var xxx = $('.form-control').val;
+        //     var yyy = document.getElementById('labelOne');
+        //     document.innerHTML = "<p>"+xxx+"</p>";
+        // }
+        $(function () {
+            $('#button1').click(function() {
+                var xxx = $('#test').val();
+                var yyy = $('#test2').val();
+                var result = xxx + yyy;
+                $('#labelOne').text(result);
+            })
+            $('#button2').click(function() {
+                var xxx = $('#test').val();
+                var yyy = $('#test2').val();
+                var result = xxx - yyy;
+                $('#labelOne').text(result);
+            })
+            $('#button3').click(function() {
+                var xxx = $('#test').val()
+                var yyy = $('#test2').val()
+                var result = xxx * yyy;
+                $('#labelOne').text(result);
+            })
+            $('#button4').click(function() {
+                var xxx = $('#test').val()
+                var yyy = $('#test2').val()
+                var result = xxx / yyy;
+                $('#labelOne').text(result);
+            })
+
+            // var xxx = $('.form-control').val;
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="test" placeholder="숫자" >
+        <input type="text" id="test2" placeholder="숫자">
+        <div>
+            <button class="btn btn-primary" type="button" id="button1">+</button>
+            <button class="btn btn-primary" type="button" id="button2">-</button>
+            <button class="btn btn-primary" type="button" id="button3">*</button>
+            <button class="btn btn-primary" type="button" id="button4">/</button>
+        </div>
+        <div>
+            <button class="btn btn-warning" type="button" id="bobo" onclick="location.reload()">다시하기</button>
+        </div>
+        <div>
+            <label for="form-control" id="labelOne"></label>
+        </div>
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+
+</html>

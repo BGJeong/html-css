@@ -1,0 +1,52 @@
+<script>
+    // 구구단
+    // for(let i=2;i<=9;i++){
+    //     document.write(i+'단<br>');
+    //     for(let j=2;j<=9;j++){
+    //         document.write(i+' x '+j+ ' ='+i*j+'<br>' );
+    //     }
+    //     document.write('<br>');
+    // }
+
+    // 짝수출력
+    // for(let i=1;i<=100;i++){
+    //     if(i%2 == 0){
+    //         document.write(i);
+    //         document.write('<br>');
+    //     }
+    // }
+
+    //별찍기
+    // for (let i = 0; i < 5; i++) {
+    //         for (let j = 0; j <= i; j++) {
+    //             document.write('*')
+    //         }
+    //         document.write('<br>');
+    //     }
+
+    //합구하기
+    // let sum=0;
+    // for(let i=1; i<=76; i++){
+    //     sum+=i;
+    // }
+    // document.write(sum);
+
+    function bubbleSort(array) {
+        for (let i = 0; i < array.length; i++) {
+            let swap;
+            for (let j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    swap = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = swap;
+                }
+            }
+            document.write(`${i}회전: ${array}<br>`);
+            if (!swap) {
+                break;
+            }
+        }
+        return array;
+    }
+    document.write(bubbleSort([5, 4, 3, 2, 1]));
+</script>

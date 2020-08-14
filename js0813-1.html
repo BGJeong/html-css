@@ -13,10 +13,8 @@
             function test() {
                 //alert("하이");
                 var xx = document.getElementById("box");
-                xx.style.width = "200px";
-                xx.style.height = "300px";
-                xx.innerText = "ㅁㄴㅇㄹ";
-                xx.innerHTML="<div>ggg</div>";
+                console.log(xx)
+                
             }
             function test2() {
                 var xx = document.getElementById("box");
@@ -30,6 +28,6 @@
         </script>
     </head>
     <body>
-        <div id=box onclick="test()" onmouseover="test2()" onmouseout="test3()">asdf</div>
+        <div id=box onclick="test()" >asdf</div>
     </body>
 </html>

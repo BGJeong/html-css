@@ -1,0 +1,88 @@
+<script>
+    // 구구단
+    // for(let i=2;i<=9;i++){
+    //     console.log(i+'단');
+    //     for(let j=2;j<=9;j++){
+    //         console.log(i+' x '+j+ ' ='+i*j);
+    //     }
+    // }
+
+    // 짝수출력
+    // for(let i=1;i<=100;i++){
+    //     if(i%2 == 0){
+    //         document.write(i);
+    //         document.write('<br>');
+    //     }
+    // }
+
+    //별찍기
+    // for (let i = 0; i < 5; i++) {
+    //         for (let j = 0; j <= i; j++) {
+    //             document.write('*')
+    //         }
+    //         document.write('<br>');
+    //     }
+
+    //합구하기
+    // let sum=0;
+    // for(let i=1; i<=76; i++){
+    //     sum+=i;
+    // }
+    // document.write(sum);
+
+    //버블정렬
+    // function bubbleSort(array) {
+    //     for (let i = 0; i < array.length; i++) {
+    //         let swap;
+    //         for (let j = 0; j < array.length - 1 - i; j++) {
+    //             if (array[j] > array[j + 1]) {
+    //                 swap = array[j];
+    //                 array[j] = array[j + 1];
+    //                 array[j + 1] = swap;
+    //             }
+    //         }
+    //         document.write(`${i}회전: ${array}<br>`);
+    //         if (!swap) {
+    //             break;
+    //         }
+    //     }
+    //     return array;
+    // }
+    // document.write(bubbleSort([5, 4, 3, 2, 1]));
+
+    //삽입정렬
+    // function insertionSort(array) {
+    //     for (let i = 1; i < array.length; i++) {
+    //         let cur = array[i];
+    //         let left = i - 1;
+    //         while (left >= 0 && array[left] > cur) {
+    //             array[left + 1] = array[left];
+    //             left--;
+    //         }
+    //         array[left + 1] = cur;
+    //         console.log(`${i}회전: ${array}`);
+    //     }
+    //     return array;
+    // }
+    // console.log(insertionSort([5, 4, 3, 2, 1]));
+
+    //선택정렬
+    // function selectionSort(array) {
+    //     for (let i = 0; i < array.length; i++) {
+    //         let minIndex = i;
+    //         for (let j = i + 1; j < array.length; j++) {
+    //             if (array[minIndex] > array[j]) {
+    //                 minIndex = j;
+    //             }
+    //         }
+    //         if (minIndex !== i) {
+    //             let swap = array[minIndex];
+    //             array[minIndex] = array[i];
+    //             array[i] = swap;
+    //         }
+    //         console.log(`${i}회전: ${array}`);
+    //     }
+    //     return array;
+    // }
+    // console.log(selectionSort([5, 4, 3, 2, 1]));
+</script>
