@@ -1,0 +1,59 @@
+<script>
+    // let values = [];
+    // for(let i=0; i<100; i++){
+    //     values[i] = Math.floor(Math.random()*6)+1;
+    // }
+    // for(let j=0; j<values.length; j++){
+    //     console.log(values[j]);
+    // }
+    // console.log(values.length);
+
+
+    // function bubbleSort(array) {
+    //     let swap, maxValue = 0;
+    //     for (let i = 0; i < array.length; i++) {
+    //         for (let j = 0; j < array.length - 1 - i; j++) {
+    //             if (array[j] > array[j + 1]) {
+    //                 swap = array[j];
+    //                 array[j] = array[j + 1];
+    //                 array[j + 1] = swap;
+    //             }
+    //         }
+    //         document.write(`${i}회전: ${array}<br>`);
+    //         if (!swap) {
+    //             break;
+    //         }
+    //     }
+    //     return array;
+
+    // }
+    // document.write(bubbleSort([1,5,3,10]));
+
+        let quo = 0; //초기화
+        let res = 0; //초기화
+        
+        for(let i=1; i<=99; i++) {
+            res = i%10;
+            quo = i/10;
+            
+            if((quo == 3) || (quo == 6) || (quo == 9)) { //십의 자리 수가 3, 6, 9인 경우
+                if((res == 3) || (res == 6) || (res == 9)) { //33, 66, 99에 대한 처리
+                    console.log(i + " 박수 두번");
+                }
+                else {
+                    console.log(i + " 박수 한번");
+                }
+                
+                continue; //밑의 else if문이 수행되어, '박수한번'이 한 번 더 출력되는 것을 방지.
+            }
+            
+            else if((res == 3) || (res == 6) || (res == 9)) { //일의 자리 수가 3, 6, 9인 경우
+                console.log(i + " 박수 한번");
+            }
+            
+            else {
+                continue; //만약 이 모든 조건문에 부합하지 않는 수라면 건너뛰고 i++를 실행시켜주기.
+            }
+            
+        }
+</script>
