@@ -1,0 +1,58 @@
+<script>
+
+    //객체....(java 다른 언어 : class)
+    //json (xml 대체 하고 있음)
+
+    var aa = {v1:1 , v2:"안녕" , v3 : false};
+
+    console.log(aa.v1);
+    //console.log(aa['v1']);
+
+    var students = [];
+
+    var st1 = {
+        name : '한조',
+        number : 17,
+        score : 50,
+        study : function(){
+            console.log(this.name + "가 " + this.score + "능력으로 공부합니다.");
+        }
+    };
+
+    students.push(st1);
+
+    var st2 = {
+        name : '트레이서',
+        number : 21,
+        score : 99,
+        study : function(){
+            console.log(this.name + "가 " + this.score + "능력으로 공부합니다.");
+        }
+
+    };
+
+    students.push(st2);
+
+    students.push({
+        name : '메르시',
+        number : 33,
+        score : 77,
+        study : function(){
+            console.log(this.name + "가 " + this.score + "능력으로 공부합니다.");
+        }
+
+    });
+
+    console.log(students[2].name);
+
+    for(st of students){
+        console.log("이름 : " + st.name);
+        console.log("번호 : " + st.number);
+        console.log("점수 : " + st.score);
+        st.study();
+    }
+
+
+
+
+</script>

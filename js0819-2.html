@@ -1,0 +1,28 @@
+<script>
+
+    function test(){
+        console.log("test!! ");
+    }
+
+    function test2(){
+        console.log("test2!! ");
+    }
+    
+    function something(some){
+        console.log("  something  ");
+        
+        some();
+        
+        console.log("  end something  ");
+    }
+
+    something(test);
+    something(test2);
+
+    something(function(){
+        console.log("익명함수");
+    });
+
+    
+
+</script>
