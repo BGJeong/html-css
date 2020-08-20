@@ -1,0 +1,16 @@
+<script>
+    //기존함수
+    function StudentData() {
+        this.name = "ㅎㅎ";
+        this.age = 29;
+        this.score = 70;
+    }
+    //st1, st2 는 참조변수(생성자(new는 주소값리턴) 사용)
+    var st1 = new StudentData();
+    var st2 = new StudentData();
+    console.log(st1.name);
+    console.log(st2.name);
+    st1.name = 'dd';
+    console.log(st1.name);
+    console.log(st2.name);
+</script>

@@ -1,0 +1,20 @@
+<script>
+    //인스턴스의 생성자
+    function StudentData(a,b,c){
+        this.name = a;
+        this.age = b;
+        this.score = c;
+
+        this.showInfo = function(){
+            console.log(this.name);
+        }
+    }
+    var st1 = new StudentData('asd', 29, 100); //인스턴스생성
+    var st2 = new StudentData('dd', 19, 20);
+
+    st1.showInfo();
+    st2.showInfo();
+    
+
+
+</script>

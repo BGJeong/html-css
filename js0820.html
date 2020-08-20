@@ -1,0 +1,22 @@
+<script>
+    var aa = {
+        v1 : 10,
+        v2 : "aa",
+        v3 : function(){},
+        v4 : {
+            a1 : 15,
+            a2 : 22,
+            a3 : [1,2,true],
+            a4 : function(){
+                console.log("dd")
+            }
+        }
+    };
+
+    console.log(aa.v1);
+    console.log(aa.v4.a2);
+    aa.v4.a4()
+    for(vv of aa.v4.a3){
+        console.log(vv);
+    };
+</script>

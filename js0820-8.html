@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function subBtn() {
+                var frm = document.getElementById('frm');
+
+                var idBox = document.getElementById('uid');
+                var pwBox = document.getElementById('pw');
+                var cpwBox = document.getElementById('cpw');
+                var nickBox = document.getElementById('nick');
+                if(idBox.value == ''){
+                    alert('id 입력');
+                    idBox.focus();
+                    return;
+                }
+                if(pwBox.value != cpwBox.value){
+                    alert('비밀번호 일치 확인');
+                    pwBox.value = '';
+                    cpwBox.value = '';
+                    pwBox.focus();
+                    return;
+                }
+
+                frm.submit();
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1>sign up</h1>
+        <form id="frm" action="./test">
+            <input id="uid" type="text" placeholder="ID"><br>
+            <input id="pw" type="password" placeholder="PW"><br>
+            <input id="cpw" type="password" placeholder="confirm PW"><br>
+            <input id='nick' type="text" placeholder="NickName"><br>
+            <input onclick="subBtn()" type="button" value="확인">
+        </form>
+    </body>
+</html>

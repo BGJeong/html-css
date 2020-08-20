@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            onload = function(){
+                console.log("dd");
+                // alert("ff");
+                // var x = confirm('gg');
+                // if(x == true){
+                //     document.write('ww');
+                // }
+                //var msg = prompt('qq');
+
+                var x = document.getElementById('u1');
+                // x.innerHTML = '<div>ddd</div>'
+                // x.innerText = 'dd<br>'
+                var y =document.getElementsByClassName('c1');
+                for(e of y){
+                    e.innerText = 'ddd';
+                }
+
+                var z = document.getElementsByTagName('li');
+                for(p of z){
+                    p.innerText = 'f';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="u1">
+           <li>asdf1</li>
+           <li id="l1">asdf2</li>
+           <li>asdf3</li>
+           <li class="c1">asdf4</li>
+           <li class="c1">asdf5</li>
+        </ul>
+        <ul id="u2">
+            <li>asdf1</li>
+            <li>asdf2</li>
+            <li>asdf3</li>
+            <li>asdf4</li>
+            <li>asdf5</li>
+        </ul>
+    </body>
+</html>
