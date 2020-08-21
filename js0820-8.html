@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+
+        </style>
         <script>
+            function checkIdReg(){
+                var idBox = document.getElementById('uid');
+                var re = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+                var msgBox = document.getElementById('uidmsg');
+                if(re.test(idBox.value)){
+                    msgBox.innerText = "일치";
+                    msgBox.style.color = 'green';
+                    msgBox.style.display = 'block';
+                }else {
+                    msgBox.innerText = "불일치";
+                    msgBox.style.color = 'red';
+                    msgBox.style.display = 'block';
+                }
+            }
+
             function subBtn() {
                 var frm = document.getElementById('frm');
 
@@ -9,11 +27,24 @@
                 var pwBox = document.getElementById('pw');
                 var cpwBox = document.getElementById('cpw');
                 var nickBox = document.getElementById('nick');
-                if(idBox.value == ''){
+                
+                var re = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+                //var result = re.test("AAA@aaa.co");
+                //console.log('re :'+result);
+                
+                if(!(re.test(idBox.value))){
                     alert('id 입력');
                     idBox.focus();
                     return;
                 }
+                re = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+                if(!(re.test(pwBox.value))){
+                    alert('비밀번호 8~15');
+                    pwBox.value = "";
+                    pwBox.focus();
+                    return;
+                }
+
                 if(pwBox.value != cpwBox.value){
                     alert('비밀번호 일치 확인');
                     pwBox.value = '';
@@ -25,12 +56,14 @@
                 frm.submit();
                 
             }
+
         </script>
     </head>
     <body>
         <h1>sign up</h1>
         <form id="frm" action="./test">
-            <input id="uid" type="text" placeholder="ID"><br>
+            <input id="uid" onblur="checkIdReg()" type="text" placeholder="ID"><br>
+            <div id="uidmsg" style="display: none;">d</div>
             <input id="pw" type="password" placeholder="PW"><br>
             <input id="cpw" type="password" placeholder="confirm PW"><br>
             <input id='nick' type="text" placeholder="NickName"><br>

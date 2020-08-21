@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function test(){
+                $('.redFont').css('color','red');
+                // var xx = document.getElementsByClassName('redFont');
+                // for(e of xx){
+                //     e.style.color = 'red';
+                // }
+                $('#l1').css('font-size', '30px');
+                // var tt = $('#l1');
+                // tt.css('font-size', '30px');
+                $('#u2').css('background-color','yellow');
+                $('#u2 li').text('hhahahaha');
+                $('#l1').attr('display', 'none');
+                //$('#l1').attr('class', 'redFont');
+
+                $('#l1').addClass('redFont');
+                $('#l1').addClass('qq');
+                $('#l1').addClass('rr');
+
+                //create element
+                // var newLi = $('<li>tttttttt</li>');
+                // newLi.text('!!!!!!');
+                // newLi.css('color', 'green');
+                
+                var newLi = $('<li></li>').text('xxxx').css('color', 'pink');
+                $('#u1').append(newLi);
+            }
+
+        </script>
+    </head>
+    <body>
+        <ul id="u1">
+            <li>asdf</li>
+            <li id="l1">asdf</li>
+            <li>asdf</li>
+            <li class="redFont">asdf</li>
+            <li class="redFont">asdf</li>
+        </ul>
+        <ul id="u2">
+            <li>asdf</li>
+            <li>asdf</li>
+            <li>asdf</li>
+            <li>asdf</li>
+            <li onclick="test()">asdf</li>
+        </ul>
+    </body>
+</html>
