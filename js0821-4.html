@@ -11,6 +11,102 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <script>
+        function checkId3(){
+            var idBox = document.getElementById('idBox');
+            var messageBox = document.getElementById('messageBox');
+            if(idBox.value == ''){
+                messageBox.setAttribute('class', 'alert alert-danger');
+                messageBox.innerText = '빈공간 x';
+            }else{
+                messageBox.setAttribute('class', 'alert alert-success');
+                messageBox.innerText = 'ok bye';
+            }
+            document.getElementById('messageRow');
+            messageRow.setAttribute('class', 'row');
+        }
+
+        function checkId2(){
+
+            $('#messagerow').remove();
+
+            var idBox = $('#idBox');
+            var rowBox = $("<div></div>");
+            rowBox.addClass('row');
+            rowBox.attr('id', 'messagerow');
+
+            var colBox1 = $('<div></div>');
+            colBox1.addClass('col-4');
+            
+            rowBox.append(colBox1);
+
+            var colBox2 = $('<div></div>');
+            colBox2.addClass('col');
+
+            rowBox.append(colBox2);
+
+            var messageBox = $('<div></div>');
+
+
+
+            if(idBox.val() == ''){
+                messageBox.addClass('alert');
+                messageBox.addClass('alert-danger');
+                messageBox.text('아이디는 빈공란 x');
+            }else{
+                messageBox.addClass('alert');
+                messageBox.addClass('alert-success');
+                messageBox.text('OK');
+            }
+
+            colBox2.append(messageBox);
+            $('#idRow').after(rowBox);
+
+        }
+        function checkId(){
+            //Vanilla JS
+            var messageRow = document.getElementById("messageRow");
+            if(messageRow != null){
+                messageRow.remove();
+            }
+
+            var idBox = document.getElementById("idBox");
+
+            var rowBox = document.createElement("div");
+            rowBox.setAttribute("class","row");
+            rowBox.setAttribute("id","messageRow");
+
+            var colBox1 = document.createElement("div");
+            colBox1.setAttribute("class","col-4");
+
+            rowBox.appendChild(colBox1);
+
+            var colBox2 = document.createElement("div");
+            colBox2.setAttribute("class","col");
+
+            rowBox.appendChild(colBox2);
+
+            var messageBox = document.createElement("div");
+
+            if(idBox.value == ""){
+
+                messageBox.setAttribute("class","alert alert-danger");
+                messageBox.innerText = "아이디는 빈공란이 아니어야 됩니다.";
+
+            }else{
+                messageBox.setAttribute("class","alert alert-success");
+                messageBox.innerText = "OK!!";
+            }
+
+            colBox2.appendChild(messageBox);
+
+            //위치 찾아 붙이기....(jquery 쓰는 이유...)
+            var idRow = document.getElementById("idRow");
+
+            idRow.parentNode.insertBefore(rowBox,idRow.nextSibling);
+        }
+        </script>
+    </script>
 </head>
 
 <body>
@@ -62,12 +158,24 @@
                         <h1 class="text-center">Sign up</h1>
                     </div>
                 </div>
-                <div class="row mt-3">
+                <div id="idRow" class="row mt-3"><!--ID-->
                     <div class="col-4">
-                        <label>ID</label>
+                        ID
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="ID">
+                        <input id="idBox" onblur="checkId3()" class="form-control" type="text" placeholder="ID">
+                    </div>
+                    <div class="col-2 pl-0">
+                        <input type="button" value="확인" class="btn btn-outline-success btn-block">
+                    </div>
+                </div>
+                
+                <div class="row d-none" id="messageRow">
+                    <div class="col-4"></div>
+                    <div class="col">
+                        <div id="messageBox" class="alert alert-success">
+                            test..
+                        </div>
                     </div>
                 </div>
                 <div class="row mt-2">
